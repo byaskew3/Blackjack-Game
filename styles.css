@@ -2,35 +2,66 @@
     margin: 0;
 }
 
+body {
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 button {
+    cursor: pointer;
     border: none;
-    background: goldenrod;
-    color: rgb(54, 122, 27);
+    background: rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
+    padding: 5px 8px;
+    margin: 10px 5px;
 }
 
 button:hover {
-    background-color: rgb(168, 129, 28);
+    background-color: rgb(255, 255, 255);
+    color: rgb(44, 44, 44);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .container {
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     max-width: 800px;
-    background-image: url(/images/blackjack-table.jpg);
+    min-height: 600px;
+    background-image: url(https://store-images.microsoft.com/image/apps.34194.9007199266340834.f8cc4272-2a64-4e47-b9ad-6d24f09d71b0.0edd7ceb-28f1-431d-98b2-5afde3425e8d?mode=scale&q=90&h=300&w=300);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     color: white;
     padding: 20px;
-    font-size: 18px;
-    margin: 20px;
+    margin: 30px auto;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.inner-container {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.35);
+    margin: 20px;
+}
+
 .container h1 {
-    color: goldenrod;
-    text-shadow: 1px 1px 2px rgb(9, 93, 6), 0 0 1em rgb(0, 255, 98), 0 0 0.2em rgb(16, 95, 9);
+    color: rgb(2, 2, 2);
+    text-shadow: 1px 1px 2px rgb(124, 124, 124), 0 0 1em rgb(160, 160, 160), 0 0 0.2em rgb(187, 187, 187);
 }
 
 .message-el {
     font-size: 28px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-weight: 400;
+    margin: 10px;
+}
+
+.cards-el, .sum-el, .player-el {
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-weight: 300;
+    margin: 5px;
 }
