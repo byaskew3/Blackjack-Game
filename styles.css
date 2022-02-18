@@ -15,8 +15,8 @@ button {
     color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
-    padding: 5px 8px;
-    margin: 10px 5px;
+    padding: 15px 24px;
+    margin: 20px 10px;
 }
 
 button:hover {
@@ -29,7 +29,7 @@ button:hover {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     max-width: 800px;
-    min-height: 600px;
+    min-height: 500px;
     background-image: url(https://store-images.microsoft.com/image/apps.34194.9007199266340834.f8cc4272-2a64-4e47-b9ad-6d24f09d71b0.0edd7ceb-28f1-431d-98b2-5afde3425e8d?mode=scale&q=90&h=300&w=300);
     background-size: cover;
     background-repeat: no-repeat;
@@ -42,26 +42,40 @@ button:hover {
 }
 
 .inner-container {
+    max-width: 800px;
+    min-height: 500px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.35);
-    margin: 20px;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 .container h1 {
     color: rgb(2, 2, 2);
     text-shadow: 1px 1px 2px rgb(124, 124, 124), 0 0 1em rgb(160, 160, 160), 0 0 0.2em rgb(187, 187, 187);
+    font-size: 48px;  
 }
 
 .message-el {
-    font-size: 28px;
+    font-size: 40px;
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
     font-weight: 400;
     margin: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.274);
 }
 
 .cards-el, .sum-el, .player-el {
-    font-size: 18px;
+    font-size: 40px;
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
     font-weight: 300;
     margin: 5px;
+}
+
+.cards-el {
+    margin-top: 40px;
+}
+
+.player-el {
+    margin-top: 30px;
+    font-size: 46px;
 }
