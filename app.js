@@ -5,12 +5,13 @@ let sumEl = document.querySelector('.sum-el');
 let playerEl = document.querySelector('.player-el');
 let startBtn = document.querySelector('.start-btn');
 let newCardBtn = document.querySelector('.newcard-btn');
-
+let playerName = document.querySelector('.player-name');
+let numberChips = document.querySelector('.number-chips');
 
 // ---------------- GLOBAL VARIABLES -----------------
 let player = {
-    name: 'Christian',
-    chips: 200
+    name: '',
+    chips: 0
 }
 
 let firstCard = getRandomCard();
@@ -19,8 +20,8 @@ let sum = firstCard + secondCard;
 
 
 // ------------------- EVENT LISTENERS --------------------------
-newCardBtn.addEventListener('click', newCard);
 startBtn.addEventListener('click', renderGame);
+newCardBtn.addEventListener('click', newCard);
 
 
 // ---------------- FUNCTIONS -------------------
@@ -91,5 +92,7 @@ function newRound() {
 
 // newPlayer() function
 function newPlayer() {
+    player.name = playerName.value;
+    player.chips = numberChips.value;
     playerEl.textContent = `${player.name}: $${player.chips}`;
 }
