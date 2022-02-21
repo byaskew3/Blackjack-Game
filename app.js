@@ -17,7 +17,9 @@ let player = {
 let firstCard = getRandomCard();
 let secondCard = getRandomCard();
 let sum = firstCard + secondCard;
-
+let isAlive = false;
+let hasBlackjack = false;
+newCardBtn.disabled = true;
 
 // ------------------- EVENT LISTENERS --------------------------
 startBtn.addEventListener('click', renderGame);
@@ -28,6 +30,9 @@ newCardBtn.addEventListener('click', newCard);
 
 // renderGame() function
 function renderGame() {
+    checkInput();
+    isAlive = true;
+    checkAlive();
     newPlayer();
     if (firstCard === 11 && secondCard === 11) {
         firstCard = getRandomCard()
@@ -71,6 +76,7 @@ function getRandomCard() {
 
 // newCard() function, allows user to add another card to hand
 function newCard() {
+    checkAlive();
     let card = getRandomCard();
     cardsEl.textContent += ` ${card}`;
     sum += card;
@@ -95,4 +101,21 @@ function newPlayer() {
     player.name = playerName.value;
     player.chips = numberChips.value;
     playerEl.textContent = `${player.name}: $${player.chips}`;
+}
+
+// checkAlive() function, has player started playing
+function checkAlive() {
+    if (isAlive) {
+        newCardBtn.disabled = false;
+    } else {
+        newCardBtn.disabled = true;
+    }
+}
+
+// checkInput() function, verifies if user has input values before starting
+function checkInput() {
+    if (playerName.value === '' || numberChips.value === '') {
+        alert('Please enter your name and the amount of chips to start playing!')
+        location.reload()
+    }
 }
